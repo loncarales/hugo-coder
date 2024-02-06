@@ -4,3 +4,6 @@
 {{ else }}
 <h2>{{ .Site.Params.info | markdownify }} </h2>
 {{ end }}
+{{ with .Site.Params.additionalContent | safeHTML }}
+<p>{{ . }}</p>
+{{ end }}
