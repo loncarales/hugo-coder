@@ -1,0 +1,2 @@
+{{ $path := printf "content/%s" (.Get "file") }}
+{{ printf "```%s\n%s\n```" (default "ini" (.Get "lang")) (readFile $path) | markdownify }}
